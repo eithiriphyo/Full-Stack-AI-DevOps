@@ -1,0 +1,18 @@
+name: CI Pipeline
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Say Hello
+        run: echo "Hello, World!"
+
+      - name: Install
+        env:
+            APP_DEMO: demo
+        run: echo "Environment $APP_DEMO"
+
+    
+    
