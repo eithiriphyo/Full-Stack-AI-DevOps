@@ -43,7 +43,7 @@ jobs:
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v4
         with:
-          context: .
-          file: docker/app1-hello/python/Dockerfile # Fixed: Added /Dockerfile to point to the file, not just the folder
+          context: docker/app1-hello/python
+          file: docker/app1-hello/python/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/app1-hello-python:latest
