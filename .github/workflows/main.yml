@@ -17,6 +17,7 @@ jobs:
           python-version: '3.13'
 
       - name: Install Dependencies
+        working-directory: docker/app1-hello/python
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
